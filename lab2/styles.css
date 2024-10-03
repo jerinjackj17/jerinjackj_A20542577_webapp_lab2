@@ -1,93 +1,128 @@
-/* Flexbox Part 1 */
-
 #flex-section1 ul {
-	padding: 0;
-	margin: 0;
-	justify-content: space-evenly;
-	display: flex;
-	flex-direction: row;
-	list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-/* end Flexbox Part 1 */
+#flex-section1 a {
+    display: block;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-
-/* Flexbox Part 2 */
+#flex-section1 a:hover {
+    background-color: #00b894;
+    color: #fff;
+    transform: scale(1.05);
+}
 
 #flex-section2 ul {
-	padding: 0;
-	margin: 0;
-	display: flex;
-
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #flex-section2 li {
-	list-style: none;
-	flex-grow: 1;
-	flex-basis: 0;
-
+    list-style: none;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #flex-section2 .item1 {
-	order: 1;
-
+    order: 1;
 }
 
 #flex-section2 .item2 {
-	order: 3;
-
+    order: 3;
 }
 
 #flex-section2 .item3 {
-	order: 2;
-
+    order: 2;
 }
 
-/* end Flexbox Part 2 */
-
-
-/* Flexbox Part 3 */
-
 #flex-section3 .box {
-	padding: 0;
-	margin: 0;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+#flex-section3 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #flex-section3 .tags ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	justify-content: flex-start;
-	display: flex;
-	flex-wrap: wrap;
-
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-/* end Flexbox Part 3 */
+#flex-section3 .tags li {
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-
-/* Grid Part 1 */
+#flex-section3 .tags li:hover {
+    background-color: #74b9ff;
+    transform: scale(1.1);
+}
 
 #grid-section1 .grid {
-	padding: 0;
-	margin: 0;
-	display: grid;
-	justify-items: stretch;
-	justify-content: space-evenly;
-	grid-template-columns: repeat(4, 1fr);
-	grid-auto-rows: 100px;
-	gap: 20px;
-
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    gap: 20px;
 }
 
-/* end Grid Part 1 */
+#grid-section1 .greybox {
+    background-color: #ddd;
+    text-align: center;
+    line-height: 100px;
+    transition: background-color 0.3s;
+}
 
+#grid-section1 .greybox:hover {
+    background-color: #81ecec;
+}
 
-/* Grid Part 2 */
+@media (max-width: 768px) {
+    #grid-section1 .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 #grid-section2 .gridboxblue {
 	display: grid;
@@ -105,65 +140,227 @@
 
 }
 
-/* end Grid Part 2 */
-
-
 /* Grid Part 3 */
-
 #grid-section3 .grid {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 100px 300px 100px;
-	gap: 10px;
-
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 300px 100px;
+    gap: 10px;
 }
 
-#grid-section3 .box1 {
-	grid-column: 1 / span 2;
-	grid-row: 1;
-
+#grid-section3 .greybox {
+    padding: 20px;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#grid-section3 .box2 {
-		order: 2;
-
-
+#grid-section3 .greybox:hover {
+    background-color: #ffeaa7;
+    transform: translateY(-5px);
 }
 
-#grid-section3 .box3 {
-		order: 1;
-
+@media (max-width: 768px) {
+    #grid-section3 .grid {
+        grid-template-columns: 1fr;
+    }
 }
-
-#grid-section3 .box4 {
-	grid-column: 1 / span 2;
-	grid-row: 3;
-
-
-}
-
-/* end Grid Part 3 */
-
-
-/* Transition Part */
 
 #transition-section .box a {
-	padding: 20px;
-	display: inline-block;
-	color: #000;
-	background-color: #ccc;
-	text-decoration: none;
-	transition: background-color 3s, color 3s;
-
-
+    padding: 20px;
+    display: inline-block;
+    color: #000;
+    background-color: #ccc;
+    text-decoration: none;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 #transition-section .box a:hover {
-	background-color: #cc0000;
-	color: #fff;
-	transition-duration: .5s;
+    background-color: #cc0000;
+    color: #fff;
+    transition-duration: 0.5s;
+}
+#flex-section1 ul {
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+}
 
+#flex-section1 a {
+    display: block;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#flex-section1 a:hover {
+    background-color: #00b894;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#flex-section2 ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#flex-section2 li {
+    list-style: none;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#flex-section2 .item1 {
+    order: 1;
+}
+
+#flex-section2 .item2 {
+    order: 3;
+}
+
+#flex-section2 .item3 {
+    order: 2;
+}
+
+#flex-section3 .box {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+#flex-section3 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#flex-section3 .tags ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#flex-section3 .tags li {
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#flex-section3 .tags li:hover {
+    background-color: #74b9ff;
+    transform: scale(1.1);
+}
+
+#grid-section1 .grid {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    gap: 20px;
+}
+
+#grid-section1 .greybox {
+    background-color: #ddd;
+    text-align: center;
+    line-height: 100px;
+    transition: background-color 0.3s;
+}
+
+#grid-section1 .greybox:hover {
+    background-color: #81ecec;
+}
+
+@media (max-width: 768px) {
+    #grid-section1 .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#grid-section2 .gridboxblue {
+	display: grid;
+	grid-column: 2 / span 3;
+	grid-row: 1 / span 3;
+	order: 2;
 
 }
 
-/* end Transition Part */
+#grid-section2 .gridboxred {
+	display: grid;
+	grid-column: 1 / span 2;
+	grid-row: 2;
+	order: 1;
+
+}
+
+/* Grid Part 3 */
+#grid-section3 .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 300px 100px;
+    gap: 10px;
+}
+
+#grid-section3 .greybox {
+    padding: 20px;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#grid-section3 .greybox:hover {
+    background-color: #ffeaa7;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    #grid-section3 .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#transition-section .box a {
+    padding: 20px;
+    display: inline-block;
+    color: #000;
+    background-color: #ccc;
+    text-decoration: none;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+#transition-section .box a:hover {
+    background-color: #cc0000;
+    color: #fff;
+    transition-duration: 0.5s;
+}
